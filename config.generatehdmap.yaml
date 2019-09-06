@@ -1,0 +1,42 @@
+bag_path : path
+lidar_point_topic: /sensor/velodyne/points
+lidar_label_topic: /sensor/velodyne/points/label_5_test_2/new
+lidar_odom_topic: /pose_optimize/velodyne/odom_fusion
+
+save_dir: divide_pcd_label_5_test_2_new/
+
+max_dis: 50
+
+acc_dis: 100
+
+###whether generate raw image
+is_generate_img: false
+cam_odom_topic: /hvo/keyframe/odom/opt
+cam_img_topic: /sensor/hugo1/image1/compressed
+cam_label_img_topic: /sensor/hugo1/image1/segdet_track/compressed
+cam_intrinsic_file: lidar_to_hugo_20190104.yaml
+cam_img_min_dis_interval: 5.0
+
+#label that you want to have in map , from 0 to 15
+using_label :
+#- 0 #road
+- 1 #lane
+- 2 #stop line
+- 3 #cross walk line
+- 4 #road arrow
+- 5 #lane marking
+- 6 #guide line
+- 7 #speed bump
+- 8 #traffic sign
+- 9 #traffic board
+- 10 #traffic light
+- 11 #pole
+#- 12 #building
+#- 13 #sidewalk 
+#- 14 #movind obejct
+#- 15 #background
+# - 16 #curb?
+
+X_ST: 440804.0
+Y_ST: 4425720.0
+Z_ST: 53.9849

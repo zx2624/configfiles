@@ -1,0 +1,116 @@
+#bag path dir
+bag_path : /media/horizon_ad/c46ecf39-923d-4758-89d0-26c1d08ae988/siyuan/map_data/BeiJing/nopath
+
+#output file name prefix
+name_this_turn : navnet_pose_optimize
+
+#lidar odom file which read from bag file
+lidar_odom_file_name : _raw_odom_.txt
+
+#lidar odom file which in world frame
+#TODO:
+lidar_odom_in_world_file_name : _raw_odom_.txt
+#lidar_odom_in_world_file_name : _ICPAtAllVertex_.txt
+
+#final lidar odom file which will be write to bag file
+final_lidar_odom : _ICPAtAllVertex_.txt
+
+#gnss odom file which read from bag
+gnss_odom_file_name : _gnss_odom_.txt
+
+#good gnss odom file which select based on gnss_odom_covariance_threshold
+gnss_odom_file_name_good : _gnss_odom_good.txt
+
+#output file dir
+out_dir : /media/horizon_ad/c46ecf39-923d-4758-89d0-26c1d08ae988/siyuan/map_data/BeiJing/nopath
+
+#frame file subdir
+frame_prefix : frame/
+#g2o file subdir
+g2o_prefix : g2o/
+#map file subdir, not be used now.
+map_prefix : map/
+#TODO:
+loop_detection_max_dis : 30.0
+loop_detection_min_dis : 0.0
+
+min_frames_num_of_loop : 40
+
+local_icp_max_dis : 5
+global_icp_max_dis : 10
+
+local_icp_max_score : 2
+global_icp_max_score : 5
+
+#TODO:
+local_icp_edges_num : 1 # change from 5
+global_icp_edges_num : 3
+
+gnss_edges_num : 1
+
+icp_max_iters : 50
+local_icp_max_correspondence_dis : 5
+global_icp_max_correspondence_dis : 10
+
+#submap size
+size_of_submap : 1
+
+#lidar to gnss param
+gnss_to_lidar_x : 0.320768
+#1.17100086441907
+gnss_to_lidar_y : 1.18948
+#-0.1630065904672196
+gnss_to_lidar_z : 0.0441331
+#0.01058459040568946
+
+#using radian from 2018-11-19
+gnss_to_lidar_roll : 0.023776209526180002
+#-3.129042033180273
+gnss_to_lidar_pitch : -0.04808484542135787
+#3.119029983253778
+gnss_to_lidar_yaw : 0.00764588310143599
+#1.586142764025011
+
+lidar_name: velodyne
+pointcloud_topic : /sensor/velodyne/points
+#TODO:
+lidar_odom_topic : /sensor/velodyne/odom
+gnss_odom_topic : /pose_optimize/velodyne/odom
+vehicle_status_topic : /vehicle/status
+#TODO:
+final_lidar_odom_topic : /pose_optimize/velodyne/odom_fusion
+
+#the covariance matrix main symmetric axis's threshold
+gnss_odom_covariance_threshold :
+- 2
+- 2
+- 10
+- 2
+- 2
+- 2
+
+#whether do local registration on poseGraphUsingICPAtAllVertex
+#TODO:
+poseGraphUsingICPAtAllVertex_local_regis_switch : false
+#The pose between fix_od_st_time and fix_od_end_time will be fixed
+fix_od_st_time: 0
+fix_od_end_time: 0
+
+#execute read data from bag
+exe_read_data_from_bag : true
+#execute pose graph using gnss odom
+#TODO:
+exe_pose_graph_using_gnss : false
+#execute pose graph using icp at all vertex
+exe_pose_graph_using_icp_at_all_vertex : true
+#execute write pose to bag
+#TODO:
+exe_write_pose_to_bag : true
+
+###zx for test
+x_cov_factor: 0
+y_cov_factor: 0
+z_cov_factor: 0
+r_cov_factor: 10
+
+num_threads: 10
