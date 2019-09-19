@@ -3,9 +3,10 @@
 bag_path : /media/horizon_ad/c46ecf39-923d-4758-89d0-26c1d08ae988/siyuan/map_data/BeiJing/nopath
 #bag_path : /media/horizon_ad/Elements/map_data/BeiJing/navnet/20190323/
 #sensor0 odom topic which will be read
-sensor0_odom_topic_name : /sensor/novatel/odom
+sensor0_odom_topic_name : /sensor/novatel/odom_correct
 #sensor1 odom topic which will be written
-sensor1_odom_topic_name : /sensor/velodyne/odom
+#TODO:
+sensor1_odom_topic_name : /sensor/velodyne/odom_correct_00_n155_true
 #sensor1 data topic which will be read
 sensor1_data_topic_name : /sensor/velodyne/points
 #sensor1 odom's frame id
@@ -18,10 +19,16 @@ sensor1_odom_child_frame_id : /velodyne_odom
 #(1)sensor1 is Lidar, sensor0 is Chassis, so you can use Chassis odom to interpolation to get lidar odom
 #(2)sensor1 is Lidar, sensor0 is Novatel, so you can use Novatel odom to interpolation to get lidar odom
 #(3)sensor1 is Lidar, sensor0 is GNSS, so you can use GNSS odom to interpolation to get lidar odom
-sensor0_to_sensor1_x : 1.17100086441907
-sensor0_to_sensor1_y : -0.1630065904672196
-sensor0_to_sensor1_z : 0.01058459040568946
+sensor0_to_sensor1_x : 0.320768
+#1.17100086441907
+sensor0_to_sensor1_y : 1.18948
+#-0.1630065904672196
+sensor0_to_sensor1_z : 0.0441331
+#0.01058459040568946
 #using radian from 2018-11-19
-sensor0_to_sensor1_roll : 0 #-3.129042033180273
-sensor0_to_sensor1_pitch : 0 #3.119029983253778
-sensor0_to_sensor1_yaw : -1.55545 #1.586142764025011
+sensor0_to_sensor1_roll : 0 #0.023776209526180002
+#-3.129042033180273
+sensor0_to_sensor1_pitch : 0 #-0.04808484542135787
+#3.119029983253778
+sensor0_to_sensor1_yaw : 0.00764588310143599
+#1.586142764025011

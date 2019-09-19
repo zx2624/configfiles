@@ -3,9 +3,9 @@
 bag_path : /media/horizon_ad/c46ecf39-923d-4758-89d0-26c1d08ae988/siyuan/map_data/BeiJing/nopath
 #bag_path : /media/horizon_ad/Elements/map_data/BeiJing/navnet/20190323/
 #sensor0 odom topic which will be read
-sensor0_odom_topic_name : /sensor/novatel/odom
+sensor0_odom_topic_name : /sensor/novatel/odom_correct
 #sensor1 odom topic which will be written
-sensor1_odom_topic_name : /sensor/velodyne/odom
+sensor1_odom_topic_name : /sensor/velodyne/odom_correct_00_n155
 #sensor1 data topic which will be read
 sensor1_data_topic_name : /sensor/velodyne/points
 #sensor1 odom's frame id
