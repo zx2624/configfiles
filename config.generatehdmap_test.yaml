@@ -3,10 +3,8 @@ lidar_point_topic: /sensor/velodyne/points
 #TODO:
 lidar_label_topic: /sensor/velodyne/points/label_5_test_2
 #TODO:
-lidar_odom_topic: /pose_optimize/velodyne/odom_onebag_with_cov
-
-
-save_dir: divide_pcd_label_5_test_2_new_918/
+lidar_odom_topic: /pose_optimize/velodyne/odom/fusion_5ring_prob2_1009
+save_dir: divide_pcd_label_5_test_2_new/
 
 max_dis: 50
 
@@ -34,11 +32,11 @@ using_label :
 - 9 #traffic board
 - 10 #traffic light
 - 11 #pole
-#- 12 #building
-#- 13 #sidewalk 
+# - 12 #building
+# - 13 #sidewalk 
 #- 14 #movind obejct
-#- 15 #background
-# - 16 #curb?
+# - 15 #background
+- 16 #curb?
 
 X_ST: 440804.0
 Y_ST: 4425720.0

@@ -35,7 +35,7 @@ using_label :
 #- 13 #sidewalk 
 #- 14 #movind obejct
 #- 15 #background
-# - 16 #curb?
+- 16 #curb?
 
 X_ST: 440804.0
 Y_ST: 4425720.0
