@@ -61,9 +61,10 @@ gnss_to_lidar_y : -0.1630065904672196
 gnss_to_lidar_z : 0.01058459040568946
 
 #using radian from 2018-11-19
-gnss_to_lidar_roll : -3.129042033180273
-gnss_to_lidar_pitch : 3.119029983253778
-gnss_to_lidar_yaw : 1.586142764025011
+#TODO:
+gnss_to_lidar_roll : 0 #-3.129042033180273
+gnss_to_lidar_pitch : 0 #3.119029983253778
+gnss_to_lidar_yaw : -1.55545 #1.586142764025011
 
 lidar_name: velodyne
 pointcloud_topic : /sensor/velodyne/points

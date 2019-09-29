@@ -75,10 +75,10 @@ gnss_to_lidar_yaw : 0.00764588310143599
 lidar_name: velodyne
 pointcloud_topic : /sensor/velodyne/points
 #TODO:
-lidar_odom_topic : /sensor/velodyne/odom_correct_00_n155_true
+lidar_odom_topic : /sensor_to_fusion_only_trans
 gnss_odom_topic : /sensor/novatel/odom_correct
 vehicle_status_topic : /vehicle/status
-final_lidar_odom_topic : /pose_optimize/velodyne/odom_onebag_with_cov
+final_lidar_odom_topic : /pose_optimize/velodyne/odom_0530_1822
 
 #the covariance matrix main symmetric axis's threshold
 gnss_odom_covariance_threshold :
@@ -108,7 +108,7 @@ exe_write_pose_to_bag : true
 ###zx for test
 x_cov_factor: 0.1
 y_cov_factor: 0.1
-z_cov_factor: 0.1
-r_cov_factor: 10
+z_cov_factor: 0.00001
+r_cov_factor: 100
 
-num_threads: 14
+num_threads: 34
