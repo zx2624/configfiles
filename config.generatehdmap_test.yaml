@@ -1,14 +1,22 @@
-bag_path : path
+bag_path : /mnt/data-1/map_data/6ring_prob1/cut2_1646
 lidar_point_topic: /sensor/velodyne/points
 #TODO:
-lidar_label_topic: /sensor/velodyne/points/label_5_test_2
+lidar_label_topic: /sensor/velodyne/points/label_5_test_2/merge_1234
 #TODO:
-lidar_odom_topic: /pose_optimize/velodyne/odom/fusion_5ring_prob2_1009
-save_dir: divide_pcd_label_5_test_2_new/
+lidar_odom_topic: /sensor/velodyne/odom_correct_00_n155_true
+save_dir: divide_pcd_label_5_test_2_new_fusion_r100/
+inter_topic: /sensor/velodyne/odom
 
 max_dis: 50
 
 acc_dis: 100
+
+#debug, to generate intensity and label pcd around certain point
+exp_dis: 1
+thresh: 10 
+scale: 20
+point: [-3292.752, -5108.157, -2.566]
+radius: 50
 
 ###whether generate raw image
 is_generate_img: false
