@@ -1,0 +1,15 @@
+bag_path : /media/horizon_ad/c46ecf39-923d-4758-89d0-26c1d08ae988/siyuan/map_data/BeiJing/20190511/sensor_20190511-154113_
+raw_point_topic: /velodyne_points
+label_point_topic: /sensor/velodyne/points/label_5_test_2
+lidar_odom_topic: /sensor/velodyne/odom
+raw_image_topic:
+- /sensor/matrix1/image1/compressed
+
+parsing_image_topic:
+- /sensor/matrix1/image1/segdet_track/compressed
+
+#The number that a pointcloud will be projected into images.
+images_num_for_pointcloud : 5
+
+#Image frame rate
+image_frame_rate: 19

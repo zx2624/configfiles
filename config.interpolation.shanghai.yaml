@@ -1,0 +1,33 @@
+#using sensor0's odom to interpolation to get sensor1's odom.
+#bag file path
+bag_path : /media/horizon_ad/c46ecf39-923d-4758-89d0-26c1d08ae988/siyuan/map_data/BeiJing/nopath
+#bag_path : /media/horizon_ad/Elements/map_data/BeiJing/navnet/20190323/
+#sensor0 odom topic which will be read
+sensor0_odom_topic_name : /sensor/nvgi120/odom
+#sensor1 odom topic which will be written
+sensor1_odom_topic_name : /sensor/velodyne/odom
+#sensor1 data topic which will be read
+sensor1_data_topic_name : /velodyne_points
+#sensor1 odom's frame id
+sensor1_odom_frame_id : /world
+#sensor1 odom's child frame id
+sensor1_odom_child_frame_id : /velodyne_odom
+
+#Notice : the param is sensor1 to sensor0 extrinsic param
+#eg.
+#(1)sensor1 is Lidar, sensor0 is Chassis, so you can use Chassis odom to interpolation to get lidar odom
+#(2)sensor1 is Lidar, sensor0 is Novatel, so you can use Novatel odom to interpolation to get lidar odom
+#(3)sensor1 is Lidar, sensor0 is GNSS, so you can use GNSS odom to interpolation to get lidar odom
+sensor0_to_sensor1_x : -0.00324408
+#1.17100086441907
+sensor0_to_sensor1_y : 0.173556
+#-0.1630065904672196
+sensor0_to_sensor1_z : 0.193057
+#0.01058459040568946
+#using radian from 2018-11-19
+sensor0_to_sensor1_roll : 1.5213926279598533
+#-3.129042033180273
+sensor0_to_sensor1_pitch : 0.004668311818131227
+#3.119029983253778
+sensor0_to_sensor1_yaw : 1.534238763470311
+#1.586142764025011
