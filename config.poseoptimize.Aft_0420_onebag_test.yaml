@@ -31,19 +31,19 @@ g2o_prefix : g2o/
 #map file subdir, not be used now.
 map_prefix : map/
 #TODO:
-loop_detection_max_dis : 10.0
+loop_detection_max_dis : 5
 loop_detection_min_dis : 0.0
 
 min_frames_num_of_loop : 40
 #TODO:
-local_icp_max_dis : 1 # change from 5
+local_icp_max_dis : 5 # change from 5 2is not possiblesd
 global_icp_max_dis : 10
-
-local_icp_max_score : 2
+#TODO:
+local_icp_max_score : 5
 #TODO:
 global_icp_max_score : 5
 
-local_icp_edges_num : 5
+local_icp_edges_num : 2 #change from5
 global_icp_edges_num : 3
 
 gnss_edges_num : 1
@@ -75,10 +75,10 @@ gnss_to_lidar_yaw : 0.00764588310143599
 lidar_name: velodyne
 pointcloud_topic : /sensor/velodyne/points
 #TODO:
-lidar_odom_topic : /sensor_to_fusion_only_trans
+lidar_odom_topic : /sensor/velodyne/odom_correct_00_n155_true
 gnss_odom_topic : /sensor/novatel/odom_correct
 vehicle_status_topic : /vehicle/status
-final_lidar_odom_topic : /pose_optimize/velodyne/odom_0530_1822
+final_lidar_odom_topic : /pose/optimize/odom_onebag_1031_
 
 #the covariance matrix main symmetric axis's threshold
 gnss_odom_covariance_threshold :
@@ -106,9 +106,9 @@ exe_pose_graph_using_icp_at_all_vertex : true
 exe_write_pose_to_bag : true
 
 ###zx for test
-x_cov_factor: 0.1
-y_cov_factor: 0.1
-z_cov_factor: 0.00001
+x_cov_factor: 1
+y_cov_factor: 1
+z_cov_factor: 0.1
 r_cov_factor: 100
 
-num_threads: 34
+num_threads: 45
