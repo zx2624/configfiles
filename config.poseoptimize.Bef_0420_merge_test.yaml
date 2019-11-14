@@ -1,9 +1,11 @@
 #bag path dir
-bag_path : [/mnt/data-2/map_data/6ring_0328_0615/6/testsubmap, /mnt/data-1/map_data/20190613/sensor_20190613-135210_/testsubmap]
-# bag_path : [/mnt/data-2/map_data/6ring_0328_0615/3/testreindex]
-# , /mnt/data-2/map_data/6ring_0328_0615/6,
-# /mnt/data-2/map_data/20190618/sensor_20190618-122836_, /mnt/data-1/map_data/20190613/sensor_20190613-135210_,
-# /mnt/data-1/map_data/20190613/sensor_20190613-135210_, /mnt/data-2/map_data/20190619/sensor_20190619-131031_]
+bag_path : [/mnt/data-2/map_data/6ring_0328_0615/3/testsubmap/cut2_1539/,
+/mnt/data-1/map_data/20190612/sensor_20190612-130021_/testsubmap/cut2_1555/,
+/mnt/data-1/map_data/20190613/sensor_20190613-135210_/testsubmap/cut2_1603/,
+/mnt/data-2/map_data/6ring_0328_0615/6/testsubmap/cut2_1549/,
+/mnt/data-2/map_data/20190618/sensor_20190618-122836_/testsubmap/cut2_1615,
+/mnt/data-2/map_data/20190619/sensor_20190619-131031_/testsubmap/cut2_1620
+]
 
 #output file name prefix
 name_this_turn : navnet_pose_optimize
@@ -72,11 +74,11 @@ gnss_to_lidar_yaw : 1.586142764025011
 lidar_name: velodyne
 pointcloud_topic : /sensor/velodyne/points
 #TODO:
-lidar_odom_topic : /sensor/velodyne/odom_correct_00_n155_true
+lidar_odom_topic : /pose/optimize/odom_onebag_1031_
 gnss_odom_topic : /sensor/novatel/odom_correct
 vehicle_status_topic : /vehicle/status
 #TODO:
-final_lidar_odom_topic : /pose_optimize/velodyne/odom/fusion_submap_1026_all
+final_lidar_odom_topic : /pose_optimize/velodyne/odom/fusion_submap_1113
 
 #the covariance matrix main symmetric axis's threshold
 gnss_odom_covariance_threshold :
@@ -112,6 +114,6 @@ y_cov_factor: 0.1
 z_cov_factor: 0.05 #0.001
 r_cov_factor: 300
 #TODO:
-num_threads: 20
+num_threads: 48
 fix_stamps: [1551942816.38, 1551942821.29, 1552290983.63, 1552290988.64, 1557987752.87,
 1557987756.87, 1558078129.57, 1558078134.93, 1560238431.05, 1560238436.05]
